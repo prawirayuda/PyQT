@@ -1,4 +1,4 @@
-tton'),1,0)
-# layout.addWidget(QPushButton('Button'),1,1)
-# layout.addWidget(QPushButton('why'),2,0,2,0)
-# layout.addWidget(QPushButton('wh
+        # self.name_entry = QLineEdit(self)
+        # self.name_entry.setAlignment(Qt.AlignLeft)
+        # self.name_entry.move(110,50)
+        # self.name_entry.resize(200,20)
