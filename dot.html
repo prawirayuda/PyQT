@@ -1,0 +1,95 @@
+<script>
+    var divs
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var btn3 = document.getElementById("btn3");
+    var btn4 = document.getElementById("btn4");
+    var btn5 = document.getElementById("btn5");
+    var btn6 = document.getElementById("btn6");
+    var btn7 = document.getElementById("btn7");
+    var btn8 = document.getElementById("btn8");
+    
+    btn1.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect1",this);
+    };
+    btn2.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect2",this);
+    };
+    btn3.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect3",this);
+    };
+    btn4.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect4",this);
+    };
+    btn5.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect5",this);
+    };
+    btn6.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect6",this);
+    };
+    btn7.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect7",this);
+    };
+    btn8.onclick = function(event){
+        event.preventDefault();
+        toggleDivs("sect8",this);
+    };
+    
+    
+    function toggleDivs(s,btn){
+        
+        if(btn.classList.contains("btn_active_state")){
+            document.getElementById(s).classList.remove("shown");
+            btn.classList.remove("btn_active_state");
+            document.getElementById(s).classList.remove("shown");
+            return;
+        }else{
+            btn1.classList.remove("btn_active_state");
+            btn2.classList.remove("btn_active_state");
+            btn3.classList.remove("btn_active_state");
+            btn4.classList.remove("btn_active_state");
+            btn5.classList.remove("btn_active_state");
+            btn6.classList.remove("btn_active_state");
+            btn7.classList.remove("btn_active_state");
+            btn8.classList.remove("btn_active_state");
+            btn.classList.add("btn_active_state");
+            document.getElementById("sect1").classList.remove("shown");
+            document.getElementById("sect2").classList.remove("shown");
+            document.getElementById("sect3").classList.remove("shown");
+            document.getElementById("sect4").classList.remove("shown");
+            document.getElementById("sect5").classList.remove("shown");
+            document.getElementById("sect6").classList.remove("shown");
+            document.getElementById("sect7").classList.remove("shown");
+            document.getElementById("sect8").classList.remove("shown");
+            document.getElementById(s).classList.add("shown");
+        }
+    
+    }
+    //Andy dari Weddingpress - Kodingan Spesial Fullpage
+    //Paksa Button1 Untuk Fokus or Klik jika di perlukan
+    //btn1.focus();
+    btn1.click();
+    </script>
+    <style>
+    
+        .elementor-editor-active .hidden{
+            display:block;
+        }
+        .hidden{
+            display:none;
+        }
+        .shown{
+            display: block !important;
+        }
+        .btn_active_state{
+            background-color: #FFFFFF !important;
+        }
+    
+    </style>
