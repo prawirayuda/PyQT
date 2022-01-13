@@ -1,1 +1,1 @@
-line.rstrip('\n') for line in f]
+D:\\testEnv\\src\\files\\users.txt

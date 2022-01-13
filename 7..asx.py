@@ -46,12 +46,13 @@ class DisplayMessageBox(QWidget):
                 global authors
                 authors = [line.rstrip() for line in f]
         except FileNotFoundError:
-                print("The file cannot be found.")
+            print("The file cannot be found.")
  # Check for name in list
         not_found_msg = QMessageBox() 
         
         
-        if self.auth_entry.text() in authors: QMessageBox().information(self, "Author Found", "Author found in catalogue!", QMessageBox.Ok, QMessageBox.Ok)
+        if self.auth_entry.text() in authors: 
+            QMessageBox().information(self, "Author Found", "Author found in catalogue!", QMessageBox.Ok, QMessageBox.Ok)
         else:
             not_found_msg = QMessageBox.question(self, "Author Not Found","Author not found in catalogue.\nDo you wish to continue?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
         if not_found_msg == QMessageBox.No:
